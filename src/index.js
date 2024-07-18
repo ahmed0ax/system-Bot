@@ -67,15 +67,6 @@ client.on('messageCreate', (message) => {
 });
   
   
-    const warnig = "<:emoji_34:1205591291543691285> كل زقين";
-
-client.on('messageCreate', (message) => {
-    if (!message.author.bot) {
-        if (message.content.toLowerCase().includes('كل زق')) {
-            message.reply(warnig);
-        }
-    }
-});
   
   client.on('messageCreate', message => {
     if (!message.author.bot && message.guild && message.content.toLowerCase() === 'باك') {
@@ -83,17 +74,7 @@ client.on('messageCreate', (message) => {
     }
 });
   //------------------
-  client.on("messageCreate", async message =>{
-if(message.content.startsWith(prefix+"setavatar")){
-if(!message.member.permissions.has("ADMINISTRATOR"))return;
-// V14 => if(!message.member.permissions.has(Discord.PermissionFlagsBits.Administrator))return;
-let avatar = message.attachments.first().url
-if(!avatar) return message.channel.send({content:"ارفع صوره"})
-client.user.setAvatar(avatar)
 
-message.channel.send({content:"Avatar Changed"})
-}
-})
   //---------
   
   client.on('messageCreate', async message => {
@@ -130,7 +111,7 @@ const activities = [
   },
   {
     type: 0, // .2لحالة الاستماع
-    name: "رمضان كريم يابن عمي",
+    name: "لا حياة بدون صلاه",
   },
   {
     type: 0, // .3لحالة البث
